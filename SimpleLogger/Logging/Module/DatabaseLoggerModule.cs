@@ -1,10 +1,6 @@
 ﻿using SimpleLogger.Logging.Module.Database;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
-using System.Linq;
-using System.Text;
 
 namespace SimpleLogger.Logging.Module
 {

@@ -76,10 +76,13 @@ namespace SimpleLogger
             var stackFrame = FindStackFrame();
             var methodBase = GetCallingMethodBase(stackFrame);
             var callingMethod = methodBase.Name;
-            var callingClass = methodBase.ReflectedType.Name;
-            var lineNumber = stackFrame.GetFileLineNumber();
+            if (methodBase.ReflectedType != null)
+            {
+                var callingClass = methodBase.ReflectedType.Name;
+                var lineNumber = stackFrame.GetFileLineNumber();
 
-            Log(level, message, callingClass, callingMethod, lineNumber);
+                Log(level, message, callingClass, callingMethod, lineNumber);
+            }
         }
 
         public static void Log(Exception exception)

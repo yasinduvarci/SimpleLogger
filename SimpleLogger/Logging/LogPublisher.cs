@@ -65,10 +65,7 @@ namespace SimpleLogger.Logging
             return _loggerHandlers.Remove(loggerHandler);
         }
 
-        public IEnumerable<LogMessage> Messages
-        {
-            get { return _messages; }
-        }
+        public IEnumerable<LogMessage> Messages => _messages;
 
         /// <summary>
         /// Gets or sets a value indicating whether this <see cref="SimpleLogger.Logging.LogPublisher"/> store log messages.

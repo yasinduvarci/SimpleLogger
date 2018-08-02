@@ -15,6 +15,10 @@ namespace SimpleLogger.Sample
                 .AddHandler(new FileLoggerHandler())
                 .AddHandler(new DebugConsoleLoggerHandler());
 
+            Example example =  new Example();
+            example.Exam();
+            Deneme();
+
             // Fast logging (monitor name of class and methods from which is the application logged)
             Logger.Log();
 
@@ -56,6 +60,11 @@ namespace SimpleLogger.Sample
             Logger.Debug.Log("I'am back!");
 
             Console.ReadKey();
+        }
+
+        private static void Deneme()
+        {
+            Logger.Log("Test ");
         }
 
         private static void MySqlDatabaseLoggerModuleSample()
